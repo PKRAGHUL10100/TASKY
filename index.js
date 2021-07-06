@@ -4,15 +4,16 @@ const taskcontainer=document.querySelector(".task_container");
 
 let globalStore=[];
 
-const generateNewCard=(taskdata)=>`<div class="col-md-6 mb-5 col-lg-4 id=${taskdata.id}">
+const generateNewCard=(taskdata)=>`<div class="col-md-6 mb-5 col-lg-4 id=${taskdata.id}" >
 <div class="card text-center">
-    <div class="card-header d-flex justify-content-end  gap-3 ">
+    <div class="card-header d-flex justify-content-end  gap-3"  >
+        <button type="button" class="btn btn-primary" id="done_button" onclick="done_button()">Editing Done</button>
         <button type="button" class="btn btn-danger" id=${taskdata.id} onclick="deleteCard.apply(this,arguments)"><i class="fas fa-trash"></i></button>
-        <button type="button" class="btn btn-success "><i class="fas fa-edit"></i></i></button>
+        <button type="button" class="btn btn-success" id="Edit" onclick="edit_button()"><i class="fas fa-edit"></i></button>
     </div><img src= ${taskdata.Imageurl} alt="...">
-    <div><h5 class="card_title mt-1">${taskdata.Tasktitle}</h5></div>
+    <div><h5 class="card_title mt-1" >${taskdata.Tasktitle}</h5></div>
     <div class="card-body">
-      <p class="card-text">${taskdata.Taskdescription}</p>
+      <p class="card-text" >${taskdata.Taskdescription}</p>
       <a href="#" class="btn btn-primary" >${taskdata.Tasktype}</a>
     </div>
   </div> `;
@@ -69,3 +70,13 @@ const deleteCard=(event)=>{
   //taskcontainer.removeChild(Document.getElementById(targetID));
 
 };
+
+const edit_button=()=>{
+  navbar_edit.contentEditable = true;
+  
+};
+
+  
+ const done_button=()=>{
+   navbar_edit.contentEditable=false;
+ };

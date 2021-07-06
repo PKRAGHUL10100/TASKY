@@ -18,22 +18,22 @@
         <title>TASKY</title>
         
     </head>
-    <body onload="loadInitialCardData()">
+    <body onload="loadInitialCardData()" class="raghul" >
         <!--model-->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade"    id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title" id="exampleModalLabel">Add New</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" >
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Image URL</label>
                         <input type="url" class="form-control" id="imageurl" aria-describedby="imageurl" placeholder="Image URL">
                       </div>
                       <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Task Title</label>
+                        <label for="exampleInputEmail1" class="form-label" >Task Title</label>
                         <input type="text" class="form-control" id="tasktitle" aria-describedby="task title" placeholder="Task title">
                       </div>
                       <div class="mb-3">
@@ -41,7 +41,7 @@
                         <input type="text" class="form-control" id="tasktype" aria-describedby="task type" placeholder="Task type" >
                       </div>
                       <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Task description</label>
+                        <label for="exampleInputEmail1" class="form-label" >Task description</label>
                         <textarea rows="5"type="text" class="form-control" id="taskdescription" aria-describedby="task description" placeholder="Task Description"></textarea>
                       </div>
                 </div>
@@ -55,7 +55,7 @@
         <!--navbar-->
         <nav class="navbar navbar-expand-lg navbar-primary bg-dark">
             <div class="container-fluid">
-              <a class="navbar-brand fw-bold text-primary" href="#">TASKY</a>
+              <a class="navbar-brand fw-bold text-primary" href="#" >TASKY</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -80,8 +80,9 @@
 
               <!--cards-->
 
-              <section>
-                  <div class="row  task_container">
+              <section >
+                  <div class="row  task_container"  id="navbar_edit">
+                    
                      
                       </div>
                      
