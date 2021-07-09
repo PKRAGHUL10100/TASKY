@@ -73,6 +73,7 @@ const deleteCard=(event)=>{
 
 const edit_button=()=>{
   navbar_edit.contentEditable = true;
+  localStorage.setItem("edit_button", JSON.stringify ({cards:globalStore} ));
   
 };
 
